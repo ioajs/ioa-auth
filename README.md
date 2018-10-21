@@ -16,22 +16,22 @@
 
 ### 输出依赖
 
-#### app
+* app *Object* 
 
-* auth *Object* 
+   * auth *Object* 
 
    * sign(data, options) *Function* 
 
-      * data 需要签名的数据
+      * data *Object* 需要签名的数据
 
-      * options 签名配置项
+      * options *Object* 签名配置项
 
-* middleware *Object* 
+   * middleware *Object* 
 
-   * auth *Function* 签名验证中间件
+      * auth *Function* 验签中间件
 
-#### ctx
+* ctx *Object* 
 
-* auth 解签后的对象
+   * auth *Object* 解签后的对象
 
 
