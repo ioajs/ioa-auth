@@ -1,0 +1,8 @@
+{
+   "app": {
+      "enable": true,
+      "config": {
+         "authKey": "test"
+      }
+   }
+}
