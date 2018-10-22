@@ -3,7 +3,8 @@
 module.exports = {
    'auth': {
       'middleware': {
-         'auth': true
+         'auth': true,
+         'role': true
       },
       'auth': {
          'sign': true

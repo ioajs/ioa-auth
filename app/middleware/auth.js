@@ -15,7 +15,7 @@ module.exports = async function (ctx, next) {
    if (!authorization) {
 
       ctx.body = {
-         msg: 'headers中缺少authorization参数',
+         msg: 'headers中缺少authorization签名参数',
          code: 1000,
       }
 
