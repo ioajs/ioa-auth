@@ -16,10 +16,8 @@ class index {
       ctx.body = ctx.parameter;
    }
    login(ctx) {
-      let body = ctx.request.body
       ctx.body = {
-         type: 'login',
-         body
+         type: 'login'
       };
    }
 }

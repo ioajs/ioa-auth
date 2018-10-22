@@ -45,14 +45,9 @@ test('get /sms/:id/sd/:kk', async t => {
 
 test('post /login', async t => {
 
-   const admin = await axios.post("/sign", { uid: 1, role: "admin" })
+   let { data } = await axios.post("/login")
 
-   let body = { xx: 666 }
-   let { data } = await axios.post("/login", body, {
-      headers: { authorization: admin.data }
-   })
-
-   t.deepEqual({ type: 'login', body }, data)
+   t.deepEqual({ type: 'login' }, data)
 
 });
 

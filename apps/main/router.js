@@ -10,7 +10,7 @@ app.get('/auth', auth, 'index.auth')
 
 app.get('/', role('admin', 'user'), 'index.home')
 
-app.post('/login', 'index.login')
+app.post('/login', auth.loose, 'index.login')
 
 app.get('/sms/:id', auth, 'index.sms')
 
