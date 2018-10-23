@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-   "auth.js": {
+   "sign.js": {
       level: 15
    }
 }

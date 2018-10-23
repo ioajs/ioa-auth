@@ -6,8 +6,6 @@ module.exports = {
          'auth': true,
          'role': true
       },
-      'auth': {
-         'sign': true
-      }
+      'sign': true
    }
 }

@@ -1,6 +1,6 @@
 {
    "name": "ioa-auth",
-   "version": "0.1.1",
+   "version": "0.2.0",
    "description": "基于jsonwebtoken包装的ioa签名与解签模块",
    "scripts": {
       "start": "node index.js",

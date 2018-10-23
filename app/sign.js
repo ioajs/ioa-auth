@@ -5,10 +5,8 @@ const { config } = require('ioa')
 
 const { authKey } = config
 
-module.exports = {
-   sign(data, options) {
+module.exports = function (data, options) {
 
-      return jwt.sign(data, authKey, options)
+   return jwt.sign(data, authKey, options)
 
-   }
 }

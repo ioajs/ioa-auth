@@ -32,9 +32,7 @@ npm install ioa-auth
 
 * app *Object* 
 
-   * auth *Object* 
-
-      * sign(data, options) *Function* 
+   * sign(data, options) *Function* 
 
          * data *Object* 需要签名的数据
 

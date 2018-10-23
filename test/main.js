@@ -1,16 +1,22 @@
 'use strict';
 
 const test = require('jtf')
+const { apps } = require('ioa')
 const { axios } = require('./helpers')
 
+const { auth } = apps
+
+const user = {
+   headers: { authorization: auth.sign({ role: "user" }) }
+}
+
+const admin = {
+   headers: { authorization: auth.sign({ role: "admin" }) }
+}
 
 test('get /', async t => {
 
-   const user = await axios.post("/sign", { uid: 1, role: "user" })
-
-   const { data } = await axios.get("/", {
-      headers: { authorization: user.data }
-   })
+   const { data } = await axios.get("/", user)
 
    t.deepEqual('hello ioa', data)
 
@@ -19,11 +25,7 @@ test('get /', async t => {
 
 test('get /sms/:id', async t => {
 
-   const admin = await axios.post("/sign", { uid: 1, role: "admin" })
-
-   let { data } = await axios.get("/sms/8", {
-      headers: { authorization: admin.data }
-   })
+   let { data } = await axios.get("/sms/8", admin)
 
    t.deepEqual({ id: '8' }, data)
 
@@ -32,11 +34,7 @@ test('get /sms/:id', async t => {
 
 test('get /sms/:id/sd/:kk', async t => {
 
-   const admin = await axios.post("/sign", { uid: 1, role: "admin" })
-
-   let { data } = await axios.get("/sms/666/sd/888", {
-      headers: { authorization: admin.data }
-   })
+   let { data } = await axios.get("/sms/666/sd/888", admin)
 
    t.deepEqual({ id: '666', kk: '888' }, data)
 
@@ -54,11 +52,7 @@ test('post /login', async t => {
 
 test('post /sms/:id/sd/:kk', async t => {
 
-   const user = await axios.post("/sign", { uid: 1, role: "user" })
-
-   let { data } = await axios.post("/sms/55/sd/66", {}, {
-      headers: { authorization: user.data }
-   })
+   let { data } = await axios.post("/sms/55/sd/66", {}, user)
 
    t.deepEqual({ id: "55", kk: "66" }, data)
 
@@ -67,11 +61,7 @@ test('post /sms/:id/sd/:kk', async t => {
 
 test('resources get /rest/:name', async t => {
 
-   const user = await axios.post("/sign", { uid: 1, role: "user" })
-
-   let { data } = await axios.get("/rest/sss", {
-      headers: { authorization: user.data }
-   })
+   let { data } = await axios.get("/rest/sss", user)
 
    t.deepEqual({ name: 'sss' }, data)
 
@@ -80,11 +70,7 @@ test('resources get /rest/:name', async t => {
 
 test('resources get /rest/:name/:id', async t => {
 
-   const user = await axios.post("/sign", { uid: 1, role: "user" })
-
-   let { data } = await axios.get("/rest/xx/888", {
-      headers: { authorization: user.data }
-   })
+   let { data } = await axios.get("/rest/xx/888", user)
 
    t.deepEqual({ id: '888', name: 'xx' }, data)
 
@@ -93,12 +79,9 @@ test('resources get /rest/:name/:id', async t => {
 
 test('resources post /rest/:name', async t => {
 
-   const user = await axios.post("/sign", { uid: 1, role: "user" })
-
    let body = { xx: 666 }
-   let { data } = await axios.post("/rest/xx", body, {
-      headers: { authorization: user.data }
-   })
+
+   let { data } = await axios.post("/rest/xx", body, user)
 
    t.deepEqual(body, data)
 
@@ -107,12 +90,9 @@ test('resources post /rest/:name', async t => {
 
 test('resources put /rest/:name/:id', async t => {
 
-   const user = await axios.post("/sign", { uid: 1, role: "user" })
-
    let body = { sss: 888 }
-   let { data } = await axios.put("/rest/xx/999", body, {
-      headers: { authorization: user.data }
-   })
+
+   let { data } = await axios.put("/rest/xx/999", body, user)
 
    t.deepEqual({ body, parameter: { name: 'xx', id: '999' } }, data)
 
@@ -121,11 +101,7 @@ test('resources put /rest/:name/:id', async t => {
 
 test('resources delete /rest/:name/:id', async t => {
 
-   const user = await axios.post("/sign", { uid: 1, role: "user" })
-
-   let { data } = await axios.delete("/rest/kk/999", {
-      headers: { authorization: user.data }
-   })
+   let { data } = await axios.delete("/rest/kk/999", user)
 
    t.deepEqual({ name: 'kk', id: '999' }, data)
 
