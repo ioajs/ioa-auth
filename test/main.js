@@ -14,6 +14,20 @@ const admin = {
    headers: { authorization: auth.sign({ role: "admin" }) }
 }
 
+test('get /auth', async t => {
+
+   const sample = { uid: 1, data: 666 }
+
+   let result = await axios.get("/auth", {
+      headers: { authorization: auth.sign(sample) }
+   })
+
+   delete result.data.iat;
+
+   t.deepEqual(sample, result.data)
+
+});
+
 test('get /', async t => {
 
    const { data } = await axios.get("/", user)

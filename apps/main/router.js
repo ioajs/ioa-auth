@@ -4,8 +4,6 @@ const app = require('ioa')
 
 const { auth, role } = app.middleware
 
-app.post('/sign', 'index.sign')
-
 app.get('/auth', auth, 'index.auth')
 
 app.get('/', role('admin', 'user'), 'index.home')
