@@ -8,7 +8,7 @@
       "test": "jtf -w"
    },
    "dependencies": {
-      "ioa": "^4.3.0",
+      "ioa": "^4.4.0",
       "jsonwebtoken": "^8.3.0"
    },
    "author": "xiangle",

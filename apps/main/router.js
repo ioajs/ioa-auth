@@ -1,22 +1,22 @@
 'use strict';
 
-const app = require('ioa')
+const { router, middleware } = require('ioa')
 
-const { auth, role } = app.middleware
+const { auth, role } = middleware
 
-app.get('/auth', auth, 'index.auth')
+router.get('/auth', auth, 'index.auth')
 
-app.get('/', role('admin', 'user'), 'index.home')
+router.get('/', role('admin', 'user'), 'index.home')
 
-app.post('/login', auth.loose, 'index.login')
+router.post('/login', auth.loose, 'index.login')
 
-app.get('/sms/:id', auth, 'index.sms')
+router.get('/sms/:id', auth, 'index.sms')
 
-app.get('/sms/:id/sd/:kk', role('admin', 'user'), 'index.sms')
+router.get('/sms/:id/sd/:kk', role('admin', 'user'), 'index.sms')
 
-app.post('/sms/:id/sd/:kk', role('admin', 'user'), 'index.sms')
+router.post('/sms/:id/sd/:kk', role('admin', 'user'), 'index.sms')
 
 ////////// REST路由 ////////////
 
 // 模糊匹配路由，泛解析，通用模型控制器
-app.resources('/rest/:name', role('user'), 'rest')
+router.resources('/rest/:name', role('user'), 'rest')

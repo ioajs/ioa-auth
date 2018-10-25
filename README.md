@@ -34,9 +34,9 @@ npm install ioa-auth
 
    * sign(data, options) *Function* 
 
-         * data *Object* 需要签名的数据
+      * data *Object* 需要签名的数据
 
-         * options *Object* 签名配置项
+      * options *Object* 签名配置项
 
    * middleware *Object* 
 
