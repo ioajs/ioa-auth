@@ -42,9 +42,9 @@ npm install ioa-auth
 
       * auth *Function* 验签中间件（严格模式，authorization参数不能为空）
 
-      * auth.loose *Function* 验签中间件（宽松模式，authorization参数允许为空）
+         * loose *Function* 验签中间件（宽松模式，authorization参数允许为空）
 
-      * role *Function* 角色验签中间件
+      * role *Function* 包含角色的验签中间件
       
 * ctx *Object* 
 
