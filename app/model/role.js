@@ -1,6 +1,6 @@
 // 'use strict'
 
-// const { Sequelize, sequelize, typea } = require('ioa')
+// const { Sequelize, sequelize, typea } = require('@app')
 // const { STRING, INTEGER, JSONB, BIGINT } = Sequelize
 
 // const router = typea.schema([String])

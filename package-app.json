@@ -1,9 +1,0 @@
-{
-   "auth": {
-      "enable": true,
-      "path": "app",
-      "config": {
-         "authKey": "test"
-      }
-   }
-}

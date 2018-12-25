@@ -39,18 +39,22 @@ test('get /', async t => {
 
 test('get /sms/:id', async t => {
 
-   let { data } = await axios.get("/sms/8", admin)
+   let params = { id: '8' }
 
-   t.deepEqual({ id: '8' }, data)
+   let { data } = await axios.get("/sms/8", { params, ...admin })
+
+   t.deepEqual(params, data)
 
 });
 
 
 test('get /sms/:id/sd/:kk', async t => {
 
-   let { data } = await axios.get("/sms/666/sd/888", admin)
+   let params = { id: '666', kk: '888' }
 
-   t.deepEqual({ id: '666', kk: '888' }, data)
+   let { data } = await axios.get("/sms/666/sd/888", { params, ...admin })
+
+   t.deepEqual(params, data)
 
 });
 
@@ -66,9 +70,11 @@ test('post /login', async t => {
 
 test('post /sms/:id/sd/:kk', async t => {
 
-   let { data } = await axios.post("/sms/55/sd/66", {}, user)
+   let body = { id: "55", kk: "66" }
 
-   t.deepEqual({ id: "55", kk: "66" }, data)
+   let { data } = await axios.post("/sms/55/sd/66", body, user)
+
+   t.deepEqual(body, data)
 
 });
 
@@ -84,9 +90,11 @@ test('resources get /rest/:name', async t => {
 
 test('resources get /rest/:name/:id', async t => {
 
-   let { data } = await axios.get("/rest/xx/888", user)
+   let params = { id: '888', name: 'xx' }
 
-   t.deepEqual({ id: '888', name: 'xx' }, data)
+   let { data } = await axios.get("/rest/xx/888", { params, ...user })
+
+   t.deepEqual(params, data)
 
 });
 

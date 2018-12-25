@@ -1,7 +1,7 @@
 'use strict'
 
 const jwt = require('jsonwebtoken')
-const { config } = require('ioa')
+const { config } = require('@app')
 
 const { authKey } = config
 

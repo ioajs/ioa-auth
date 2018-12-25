@@ -1,6 +1,6 @@
 'use strict';
 
-const { sign } = require('ioa')
+const { sign } = require('@app')
 
 class index {
    sign(ctx) {
@@ -13,7 +13,7 @@ class index {
       ctx.body = 'hello ioa';
    }
    sms(ctx) {
-      ctx.body = ctx.parameter;
+      ctx.body = ctx.params;
    }
    login(ctx) {
       ctx.body = {
