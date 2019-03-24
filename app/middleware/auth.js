@@ -1,16 +1,16 @@
 'use strict'
 
-const jwt = require('jsonwebtoken')
-const { config } = require('@app')
+const jwt = require('jsonwebtoken');
+const { config } = require('@app');
 
-const { authKey } = config
+const { authKey } = config;
 
 /**
  * 签名验证
  */
 async function auth(ctx, next) {
 
-   const authorization = ctx.get('authorization')
+   const authorization = ctx.get('authorization');
 
    if (!authorization) {
 

@@ -1,16 +1,18 @@
 'use strict';
 
-const { sign } = require('@app')
+const { apps } = require('@app');
 
-class index {
+const { sign } = apps.app;
+
+class Home {
+   index(ctx) {
+      ctx.body = 'hello ioa';
+   }
    sign(ctx) {
       ctx.body = sign(ctx.request.body);
    }
    auth(ctx) {
       ctx.body = ctx.auth;
-   }
-   home(ctx) {
-      ctx.body = 'hello ioa';
    }
    sms(ctx) {
       ctx.body = ctx.params;
@@ -22,4 +24,4 @@ class index {
    }
 }
 
-module.exports = index
+module.exports = Home

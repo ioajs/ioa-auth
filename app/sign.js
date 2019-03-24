@@ -1,9 +1,9 @@
 'use strict';
 
-const jwt = require('jsonwebtoken')
-const { config } = require('@app')
+const jwt = require('jsonwebtoken');
+const { config } = require('@app');
 
-const { authKey } = config
+const { authKey } = config;
 
 module.exports = function (data, options) {
 

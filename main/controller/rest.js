@@ -1,8 +1,6 @@
 'use strict';
 
-let { Controller } = require('@app')
-
-class rest extends Controller {
+class Rest {
    async index(ctx) {
       ctx.body = ctx.params
    }
@@ -32,4 +30,4 @@ class rest extends Controller {
    }
 }
 
-module.exports = rest
+module.exports = Rest
