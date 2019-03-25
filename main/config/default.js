@@ -2,8 +2,8 @@
 
 module.exports = {
    port: 8900,
-   "@apps": {
-      "app": {
+   "@components": {
+      "./app": {
          "authKey": "test"
       }
    }

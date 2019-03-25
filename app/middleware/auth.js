@@ -41,7 +41,7 @@ async function auth(ctx, next) {
 
    ctx.auth = jwt.decode(authorization)
 
-   await next()
+   await next();
 
 }
 

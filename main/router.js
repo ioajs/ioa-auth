@@ -1,8 +1,8 @@
 'use strict';
 
-const { apps, router } = require('@app');
+const { router, middleware } = require('@app');
 
-const { auth, role } = apps.app.middleware;
+const { auth, role } = middleware;
 
 router.get('/auth', auth, 'home.auth');
 

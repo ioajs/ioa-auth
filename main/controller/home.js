@@ -1,8 +1,8 @@
 'use strict';
 
-const { apps } = require('@app');
+const app = require('@app');
 
-const { sign } = apps.app;
+const { sign } = app;
 
 class Home {
    index(ctx) {

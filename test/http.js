@@ -1,18 +1,19 @@
 'use strict';
 
-const test = require('jtf')
+const test = require('jtf');
 const ioa = require('ioa');
-const axios = require('axios')
+const axios = require('axios');
 
 ioa.loader();
 
 ioa.http();
 
-const { apps } = ioa;
+const { $main } = ioa;
+
+const { sign } = $main;
 
 axios.defaults.baseURL = 'http://localhost:8900';
 
-const { sign } = apps.app;
 
 const user = {
    headers: { authorization: sign({ role: "user" }) }
