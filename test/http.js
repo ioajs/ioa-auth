@@ -8,9 +8,9 @@ ioa.loader();
 
 ioa.http();
 
-const { $main } = ioa;
+const { main } = ioa;
 
-const { sign } = $main;
+const { sign } = main;
 
 axios.defaults.baseURL = 'http://localhost:8900';
 
