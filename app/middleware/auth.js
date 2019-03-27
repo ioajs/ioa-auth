@@ -48,7 +48,7 @@ async function auth(ctx, next) {
 /**
  * 宽松验证模式，允许authorization为空
  */
-auth.loose = async function (ctx, next) {
+async function loose(ctx, next) {
 
    const authorization = ctx.get('authorization')
 
@@ -76,6 +76,8 @@ auth.loose = async function (ctx, next) {
    await next()
 
 }
+
+auth.loose = loose;
 
 
 module.exports = auth

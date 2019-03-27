@@ -8,12 +8,12 @@
       "test": "jtf -w"
    },
    "dependencies": {
-      "ioa": "^6.3.0-alpha.2",
       "jsonwebtoken": "^8.3.0"
    },
    "author": "xiangle",
    "license": "ISC",
    "devDependencies": {
+      "ioa": "^6.3.0-alpha.2",
       "@ioa/http": "^6.3.0-alpha.1",
       "axios": "^0.18.0",
       "jtf": "^1.5.0"
