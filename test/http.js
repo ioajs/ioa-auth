@@ -4,9 +4,19 @@ const test = require('jtf');
 const ioa = require('ioa');
 const axios = require('axios');
 
-ioa.loader();
-
-ioa.http();
+ioa.loader({
+   "./main": {
+      "enable": true,
+      "components": {
+         "@ioa/http": {
+            "enable": true,
+         },
+         ".": {
+            "enable": true,
+         }
+      },
+   },
+});
 
 const { main } = ioa;
 

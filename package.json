@@ -13,9 +13,9 @@
    "author": "xiangle",
    "license": "ISC",
    "devDependencies": {
-      "ioa": "^6.3.0-alpha.2",
-      "@ioa/http": "^6.3.0-alpha.1",
+      "@ioa/http": "^6.3.0",
       "axios": "^0.18.0",
+      "ioa": "^6.3.1",
       "jtf": "^1.5.0"
    },
    "files": [
