@@ -1,25 +1,19 @@
 'use strict';
 
-const { parentApps } = require('@app');
+const component = require('@app');
 
 module.exports = {
    "sign.js": {
       level: 15,
       module(data) {
-         for (const name in parentApps) {
-            const app = parentApps[name];
-            app.sign = data;
-         }
+         component.shared("sign", data);
          return data;
       }
    },
    "middleware": {
-      level: 35,
+      level: 30,
       directory(data) {
-         for (const name in parentApps) {
-            const app = parentApps[name];
-            Object.assign(app.middleware, data);
-         }
+         component.shared("middleware", data);
          return data;
       }
    },

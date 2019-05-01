@@ -1,6 +1,6 @@
 {
    "name": "@ioa/auth",
-   "version": "7.0.0-alpha.0",
+   "version": "7.0.0-alpha.1",
    "description": "基于jsonwebtoken包装的ioa签名与解签模块",
    "scripts": {
       "start": "node index.js",
@@ -13,9 +13,9 @@
    "author": "xiangle",
    "license": "ISC",
    "devDependencies": {
-      "@ioa/http": "^7.0.0-alpha.0",
+      "@ioa/http": "^7.0.0-alpha.3",
       "axios": "^0.18.0",
-      "ioa": "^7.0.0-alpha.2",
+      "ioa": "^7.0.0-alpha.5",
       "jtf": "^1.5.0"
    },
    "files": [

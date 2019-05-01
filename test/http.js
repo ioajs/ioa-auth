@@ -4,6 +4,8 @@ const test = require('jtf');
 const ioa = require('ioa');
 const axios = require('axios');
 
+axios.defaults.baseURL = 'http://localhost:8900';
+
 ioa.loader({
    "./main": {
       "enable": true,
@@ -11,7 +13,7 @@ ioa.loader({
          "@ioa/http": {
             "enable": true,
          },
-         ".": {
+         "./": {
             "enable": true,
          }
       },
@@ -21,9 +23,6 @@ ioa.loader({
 const { main } = ioa;
 
 const { sign } = main;
-
-axios.defaults.baseURL = 'http://localhost:8900';
-
 
 const user = {
    headers: { authorization: sign({ role: "user" }) }
