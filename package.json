@@ -1,6 +1,6 @@
 {
    "name": "@ioa/auth",
-   "version": "7.0.0-alpha.1",
+   "version": "8.0.2",
    "description": "基于jsonwebtoken包装的ioa签名与解签模块",
    "scripts": {
       "start": "node index.js",
@@ -8,18 +8,19 @@
       "test": "jtf -w"
    },
    "dependencies": {
-      "jsonwebtoken": "^8.3.0"
+      "ioa": "^8.0.0",
+      "ioa-router": "^0.2.1",
+      "jsonwebtoken": "^8.5.1"
    },
    "author": "xiangle",
    "license": "ISC",
    "devDependencies": {
-      "@ioa/http": "^7.0.0-alpha.3",
-      "axios": "^0.18.0",
-      "ioa": "^7.0.0-alpha.5",
-      "jtf": "^1.5.0"
+      "@ioa/koa": "^8.0.3",
+      "axios": "^0.18.1",
+      "jtf": "^1.6.1"
    },
    "files": [
-      "app",
-      "!app/node_modules"
+      "lib",
+      "!lib/node_modules"
    ]
 }

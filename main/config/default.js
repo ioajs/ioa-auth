@@ -1,9 +1,11 @@
 'use strict';
 
 module.exports = {
-   port: 8900,
    "components": {
-      "./": {
+      "@ioa/koa": {
+         port: 8900,
+      },
+      "./lib": {
          "authKey": "test"
       }
    }

@@ -10,19 +10,17 @@ ioa.loader({
    "./main": {
       "enable": true,
       "components": {
-         "@ioa/http": {
+         "@ioa/koa": {
             "enable": true,
          },
-         "./": {
+         "./lib": {
             "enable": true,
          }
       },
    },
 });
 
-const { main } = ioa;
-
-const { sign } = main;
+const { sign } = ioa.main;
 
 const user = {
    headers: { authorization: sign({ role: "user" }) }
@@ -36,13 +34,13 @@ test('get /auth', async t => {
 
    const sample = { uid: 1, data: 666 }
 
-   let result = await axios.get("/auth", {
+   const result = await axios.get("/auth", {
       headers: { authorization: sign(sample) }
    })
 
    delete result.data.iat;
 
-   t.deepEqual(sample, result.data)
+   t.deepEqual(sample, result.data);
 
 });
 
