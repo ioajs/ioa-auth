@@ -4,13 +4,13 @@ const { router, middleware } = require('@app');
 
 const { auth } = middleware;
 
-router.get('/auth', auth.verify, 'home.auth');
+router.get('/auth', auth.verifyStrict, 'home.auth');
 
 router.get('/', auth.role('admin', 'user'), 'home.index');
 
-router.post('/login', auth.verifyLoose, 'home.login');
+router.post('/login', auth.verify, 'home.login');
 
-router.get('/sms/:id', auth.verify, 'home.sms');
+router.get('/sms/:id', auth.verifyStrict, 'home.sms');
 
 router.get('/sms/:id/sd/:kk', auth.role('admin', 'user'), 'home.sms');
 
