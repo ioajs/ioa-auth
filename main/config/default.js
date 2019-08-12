@@ -5,8 +5,11 @@ module.exports = {
       "@ioa/koa": {
          port: 8900,
       },
-      "./lib": {
-         "authKey": "test"
+      "@ioa/auth": {
+         "roles": {
+            "admin": "df8d8**4545",
+            "member": "7dfdfd*34343",
+         },
       }
    }
 }
