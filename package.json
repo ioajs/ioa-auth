@@ -1,26 +1,53 @@
 {
-   "name": "@ioa/auth",
-   "version": "9.1.0",
-   "description": "基于jsonwebtoken包装的ioa签名与解签模块",
-   "scripts": {
-      "start": "node index.js",
-      "dev": "node index.js",
-      "test": "jtf -w"
-   },
-   "author": "xiangle",
-   "license": "ISC",
-   "dependencies": {
-      "jsonwebtoken": "^8.5.1",
-      "jtf": "^1.6.1"
-   },
-   "devDependencies": {
-      "@ioa/koa": "^9.0.1",
-      "axios": "^0.18.1",
-      "ioa": "^9.0.1",
-      "ioa-router": "^9.0.1"
-   },
-   "files": [
-      "lib",
-      "!lib/node_modules"
-   ]
+  "_from": "@ioa/auth@^9.0.1",
+  "_id": "@ioa/auth@9.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-Rbtcjzb14fJQAUQk1eCeZMBXnFrt9hQ029v7y086n0BsoTpfGx/SL8UMA+rFVh6udxO+GhPSzZVBRs55zlfMNg==",
+  "_location": "/@ioa/auth",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@ioa/auth@^9.0.1",
+    "name": "@ioa/auth",
+    "escapedName": "@ioa%2fauth",
+    "scope": "@ioa",
+    "rawSpec": "^9.0.1",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@ioa/auth/-/auth-9.0.1.tgz",
+  "_shasum": "e68da71020733906d8179171c4e6e4549f0bf2c8",
+  "_spec": "@ioa/auth@^9.0.1",
+  "_where": "D:\\Nodejs\\Project\\ioa\\ioa-apps",
+  "author": {
+    "name": "xiangle"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "jtf": "^1.6.1"
+  },
+  "deprecated": false,
+  "description": "基于jsonwebtoken包装的ioa签名与解签模块",
+  "devDependencies": {
+    "@ioa/koa": "^9.2.1",
+    "axios": "^0.18.1",
+    "ioa": "^9.2.1"
+  },
+  "files": [
+    "lib",
+    "!lib/node_modules"
+  ],
+  "license": "ISC",
+  "name": "@ioa/auth",
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node index.js",
+    "test": "jtf -w"
+  },
+  "version": "9.2.1"
 }
