@@ -7,7 +7,7 @@ const axios = require('axios');
 const app = ioa.components["./lib/"];
 axios.defaults.baseURL = 'http://localhost:8500';
 
-test('/strict', async t => {
+test('/ sign', async t => {
 
    const options = {
       headers: {
@@ -17,20 +17,24 @@ test('/strict', async t => {
 
    const { data } = await axios.get("/strict", options);
 
-   t.deepEqual(data, 'hello ioa');
+   t.deepEqual('hello ioa', data);
 
 });
 
-test('/loose', async t => {
+
+test('/ sign error', async t => {
 
    const options = {
       headers: {
-         // sign: 'xxx'
+         sign: "xxxx"
       }
    }
-   
-   const { data } = await axios.get("/loose", options);
 
-   t.deepEqual(data, 'hello ioa');
+   const { data } = await axios.get("/strict", options);
+
+   t.deepEqual({
+      code: 402,
+      error: '无效签名'
+   }, data);
 
 });

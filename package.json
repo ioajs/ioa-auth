@@ -49,5 +49,5 @@
     "start": "node index.js",
     "test": "jtf -w"
   },
-  "version": "9.2.1"
+  "version": "9.2.2"
 }
