@@ -2,6 +2,8 @@
 
 const { router, middleware } = require('@app')
 
-const { verify } = middleware;
+const { verify, role } = middleware;
 
-router.get('/strict', verify, 'home.index');
+router.get('/sign', verify, 'home.index');
+
+router.get('/role', role('admin', 'user'), 'home.role');

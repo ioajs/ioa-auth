@@ -44,7 +44,7 @@ npm install ioa-auth
 
          * loose *Function* 验签中间件（宽松模式，authorization参数允许为空）
 
-      * role *Function* 包含角色的验签中间件
+      * role *Function* 集成角色、签名验签的中间件
       
 * ctx *Object* 
 

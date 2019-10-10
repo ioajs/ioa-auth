@@ -4,7 +4,7 @@ module.exports = {
    "@ioa/koa": {
       port: 8500,
    },
-   "./lib/": {
+   "lib": {
       "password": "test"
    }
 }
