@@ -28,15 +28,14 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "jsonwebtoken": "^8.5.1",
-    "jtf": "^1.6.1"
+    "jsonwebtoken": "^8.5.1"
   },
   "deprecated": false,
   "description": "基于jsonwebtoken包装的ioa签名与解签模块",
   "devDependencies": {
     "@ioa/koa": "^9.5.0",
     "axios": "^0.18.1",
-    "ioa": "^9.5.0"
+    "ioa": "^9.7.0"
   },
   "files": [
     "lib",
@@ -49,5 +48,5 @@
     "start": "node index.js",
     "test": "jtf -w"
   },
-  "version": "9.5.0"
+  "version": "9.6.0"
 }

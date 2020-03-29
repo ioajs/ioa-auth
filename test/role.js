@@ -11,7 +11,7 @@ test('admin', async t => {
 
    const options = {
       headers: {
-         sign: main.sign({ uid: 1, role: "admin" })
+         sign: main.sign({ id: 1, role: "admin" })
       }
    }
 
@@ -26,7 +26,7 @@ test('user', async t => {
 
    const options = {
       headers: {
-         sign: main.sign({ uid: 1, role: "user" })
+         sign: main.sign({ id: 1, role: "user" })
       }
    }
 
