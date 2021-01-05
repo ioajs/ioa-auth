@@ -34,7 +34,7 @@
   "description": "基于jsonwebtoken包装的ioa签名与解签模块",
   "devDependencies": {
     "@ioa/koa": "^9.5.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "ioa": "^9.7.0"
   },
   "files": [
